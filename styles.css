@@ -1,16 +1,19 @@
 body {
     min-height: 100vh;
+    background-color: rgb(200, 200, 200);
+    font-family: 'Bangers', 'Courier New', Courier, monospace;
+    font-size: x-large;
+    color: black;
+    
 }
 
 .header {
-    border: solid black;
     display: flex;
     justify-content: center;
 }
     
 
 .content-container {
-    border: solid rgb(130, 153, 95);
     display: flex;
     justify-content: center;
     gap: 300px;
@@ -18,32 +21,90 @@ body {
 }
 
 .settings-container {
-    border: solid black;
     display: flex;
     height: 450px;
     width: 410px;
     margin-top: 50px;
     flex-direction: column;
+    border-radius: 40px;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    border: 2px solid whitesmoke;
+    font-size: large;
 }
 
 .header-settings {
     display: flex;
-    border: solid black;
     justify-content: center;
+    border: 2px solid whitesmoke;
+    border-radius: 40px;
 }
 
-.buttons {
+.buttons-container {
     display: flex;
-    border: solid pink;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 450px;
-    gap: 50px;
+    gap: 40px;
 }
 
-.clear {
+button {
+    display: flex;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+    will-change: box-shadow,transform;
+    background: #FCFCFD;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    height: 30px;
+    padding: 0 34px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 6px;
+    color: #36395a;
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+    
+}
+
+button:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    transform: translateY(-2px);
+}
+button:active{
+    box-shadow: inset 0px 3px 7px #d6d6e7;
+    transform: translateY(2px);
+}
+
+.black {
+    display: flex;
+    justify-content: center;
     width: 75px;
+}
+
+.rainbow {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+}
+
+.era {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+}
+
+
+.clear {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+.dime {
+    display: flex;
+    justify-content: center;
+    width: 105px;
 }
 
 .color-choice {
@@ -71,16 +132,3 @@ height:
 }
 
 
-.sketch {
-    background-color: black;
-}
-
-.eraser {
-    background-color: white;
-}
-
-
-
-.rainbow {
-    background-color: 
-}

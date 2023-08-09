@@ -1,3 +1,5 @@
+//DOM Elements for buttons and container//
+
 const sketchPad = document.getElementById('sketch-container');
 const clearBtn = document.querySelector('.clear');
 const eraseBtn = document.getElementById('erase');
@@ -6,15 +8,18 @@ const dimensionsBtn = document.getElementById('dimensions');
 const rgbBtn = document.getElementById ('rgb');
 
 
+// Function for random RGB values//
+function randomColor () {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `${r}, ${g}, ${b}`;
+}
 
 
-
-
-
-
-
+// Function to create rows on flex container//
 function makeRows (num) {
-    sketchPad.innerHTML = '';
+    sketchPad.innerHTML = "";
     for (let i = 0; i < num; i++) {
             let dimensions = Math.sqrt(num);
             let widthHeight = (592 / dimensions) - 2;
@@ -23,8 +28,10 @@ function makeRows (num) {
             rows.style.width = `${widthHeight}`+ 'px';
             rows.style.height = `${widthHeight}` + 'px';
             sketchPad.appendChild(rows);
+            rows.style.backgroundColor = 'white';
+            
             rows.addEventListener('mouseover', (e) => {
-                rows.classList.add('sketch');
+                rows.style.backgroundColor = 'black';
             });
 
             clearBtn.addEventListener('click', (e) => {
@@ -47,17 +54,14 @@ function makeRows (num) {
                 rows.addEventListener('mouseover', (e) => {
                     rows.style.backgroundColor = "rgb("+ `${randomColor()}`+ ")";
                     
-                })
-            })
-                
-                
-                
+                });
+            });
     } 
 }
 
 makeRows(256);
 
-
+// Event listener to change dimensions in flex container//
 dimensionsBtn.addEventListener('click', (e) => {
     let side;
     do {
@@ -74,14 +78,7 @@ dimensionsBtn.addEventListener('click', (e) => {
     
 
 
-function randomColor () {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `${r}, ${g}, ${b}`;
-    
 
-}
 
 
 
