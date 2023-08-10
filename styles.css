@@ -80,18 +80,21 @@ button:active{
     display: flex;
     justify-content: center;
     width: 75px;
+    padding-top: 5px;
 }
 
 .rainbow {
     display: flex;
     justify-content: center;
     width: 50px;
+    padding-top: 5px;
 }
 
 .era {
     display: flex;
     justify-content: center;
     width: 60px;
+    padding-top: 5px;
 }
 
 
@@ -99,12 +102,14 @@ button:active{
     display: flex;
     justify-content: center;
     width: 80px;
+    padding-top: 5px;
 }
 
 .dime {
     display: flex;
     justify-content: center;
     width: 105px;
+    padding-top: 5px;
 }
 
 .color-choice {
